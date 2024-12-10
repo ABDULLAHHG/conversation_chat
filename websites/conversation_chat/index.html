@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<style>
+            #username {
+            margin-left: auto; /* Pushes the username to the right */
+            color: white; /* Text color for username */
+        }
+</style>
+<html>
+<head>
+<title>Simulated Private Chat</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+    <a href="#search">Search</a>
+    <a href="#communication">Communication History</a>
+    <a href="#contacts">Contacts</a>
+    <a href="#" id = "username"></a>
+</nav>
+
+<div id="search" class="page">
+    <h2>Search User</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Enter username">
+        <button class="button" onclick="searchUser()">Search</button>
+        <ul id="search-results"></ul>
+    </div>
+</div>
+
+<div id="chat" class="page">
+    <h2 id="chat-header">Chat</h2>
+    <div class="chat-container" id="chatMessages"></div>
+    <div class="message-input">
+        <input type="text" id="messageInput" placeholder="Type your message">
+        <button class="button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<div id="communication" class="page">
+    <h2>Communication History</h2>
+    <div class="communication-history" id="communicationHistory"></div>
+</div>
+
+<div id="contacts" class="page">
+    <h2>Contacts</h2>
+    <ul id="contact-list" class="user-list"></ul>
+</div>
+<script src="auth.js" defer></script>
+<script src="script.js" defer></script>
+<script src="search.js" defer></script>
+<script src="contact.js" defer></script>
+<script src="chat.js" defer></script>
+<script src="../../components\\darkmod\\dark.js"></script>
+<script src="\www\reg3\components\get_ip\get_ip.js"></script>
+</body>
+</html>
+
+
