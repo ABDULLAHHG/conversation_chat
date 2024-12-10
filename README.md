@@ -7,7 +7,7 @@ its a simple chat that work on a private network
 
 
 #### how to run it 
-1 - create a database and import db.sql <br>
+.1 - create a database and import db.sql <br>
 2 - create .env file and copy the template in the .env.example and fill it with the requirement <br>
 3 - install python requrement libraries `pip install -r requirement.txt` <br>
 4 - run flask `python app.py` or `python3 app.py`<br>
