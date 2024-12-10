@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #0056b3; /* Darker blue for navigation for better contrast */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav button {
+    background-color: #007bff; /* Bright blue for buttons */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+nav button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+nav button:active {
+    background-color: #004085; /* Even darker shade when active */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+.nav-h1 {
+    color: #343a40; /* Dark text for heading */
+    text-align: center;
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+@media (max-width: 600px) {
+    nav button {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .group-buttons {
+        margin: auto auto auto 80%;
+    }
+}
