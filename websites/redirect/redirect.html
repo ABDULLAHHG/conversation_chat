@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script src="\www\reg3\components\get_ip\get_ip.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const accessToken = decodeURIComponent(urlParams.get('token'));
+
+        if (accessToken) {
+            // Validate the access token and retrieve user info
+            fetch(`http://${ip_address}:5000/protected`, { // Your protected route
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Protected data:', data);
+
+                // Store the username in session storage
+                if (data) {
+                    sessionStorage.setItem('token', accessToken);
+                    // Redirect to the final destination
+                    window.location.href = '/www/reg3/websites/conversation_chat/index.html'; // Replace with your actual protected website URL
+                } else {
+                    console.error('Username not found in the response.');
+                    alert("Unexpected response from the server.");
+                }
+            })
+            .catch(error => {
+                console.error('Error accessing protected route:', error);
+                window.location.href = '/www/reg3/websites/index.html'; // Replace with your actual protected website URL
+                alert("Error accessing protected route. Please try again later.");
+            });
+        } else {
+            console.error('Access token not found.');
+            window.location.href = '/www/reg3/websites/index.html'; // Replace with your actual protected website URL
+            alert("Error: Access token not found.");
+        }
+    </script>
+</body>
+</html>
