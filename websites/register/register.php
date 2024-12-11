@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include "../../components\\navbar\\navbar.html";?>
+<?php include "../../components//navbar//navbar.html";?>
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-<script src="../../components\\darkmod\\dark.js">
+<script src="../../components/darkmod/dark.js">
 </script>
         <h1>Registration</h1>
         <form id="register-form">
@@ -41,7 +41,7 @@
         </form>
     </div>
 
-    <script src="\www\reg3\components\get_ip\get_ip.js"></script>
+    <script src="../../components/get_ip/get_ip.js"></script>
     <script src="password-check.js" defer></script>
     <script src="phone-check.js" defer></script>
     <script src="name-check.js" defer></script>
