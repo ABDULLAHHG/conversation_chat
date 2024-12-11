@@ -2,3 +2,6 @@ Flask
 flask-cors
 PyJWT
 python-dotenv 
+pymysql
+sqlalchemy
+
