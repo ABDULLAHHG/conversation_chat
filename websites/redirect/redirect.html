@@ -6,7 +6,7 @@
     <title>Redirecting...</title>
 </head>
 <body>
-    <script src="\www\reg3\components\get_ip\get_ip.js"></script>
+    <script src="../../components/get_ip/get_ip.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const accessToken = decodeURIComponent(urlParams.get('token'));
@@ -32,7 +32,7 @@
                 if (data) {
                     sessionStorage.setItem('token', accessToken);
                     // Redirect to the final destination
-                    window.location.href = '/www/reg3/websites/conversation_chat/index.html'; // Replace with your actual protected website URL
+                    window.location.href = '../conversation_chat/index.html'; // Replace with your actual protected website URL
                 } else {
                     console.error('Username not found in the response.');
                     alert("Unexpected response from the server.");
@@ -40,12 +40,12 @@
             })
             .catch(error => {
                 console.error('Error accessing protected route:', error);
-                window.location.href = '/www/reg3/websites/index.html'; // Replace with your actual protected website URL
+                window.location.href = '../index.html'; // Replace with your actual protected website URL
                 alert("Error accessing protected route. Please try again later.");
             });
         } else {
             console.error('Access token not found.');
-            window.location.href = '/www/reg3/websites/index.html'; // Replace with your actual protected website URL
+            window.location.href = '../index.html'; // Replace with your actual protected website URL
             alert("Error: Access token not found.");
         }
     </script>

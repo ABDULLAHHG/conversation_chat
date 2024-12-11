@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php include "../../components\\navbar\\navbar.html";?>
+<?php include "../../components//navbar//navbar.html";?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <script src="../../components\\darkmod\\dark.js">
+        <script src="../../components//darkmod//dark.js">
         </script>
         <h1>Login</h1>
         <form id="login-form">
@@ -22,7 +22,7 @@
             <button type="submit">Login</button>
         </form>
     </div>
-    <script src="\www\reg3\components\get_ip\get_ip.js"></script>
+    <script src="../../components/get_ip/get_ip.js"></script>
     <script src="email-check.js"></script>
     <script src="login.js"></script>
 

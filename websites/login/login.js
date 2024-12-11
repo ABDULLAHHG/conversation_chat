@@ -22,7 +22,7 @@
         })
         .then(data => {
             // Instead of storing tokens, redirect to a temporary page
-            const redirectUrl = `http://${ip_address}/www/reg3/websites/redirect/redirect.html?token=${encodeURIComponent(data.access_token)}`; // Replace 3001 with your temporary page port
+            const redirectUrl = `http://${ip_address}/conversation_chat/websites/redirect/redirect.html?token=${encodeURIComponent(data.access_token)}`; // Replace 3001 with your temporary page port
             window.location.href = redirectUrl;
             })
         .catch(err => {

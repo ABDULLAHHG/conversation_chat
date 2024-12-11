@@ -43,9 +43,9 @@
     </style>
 </head>
 <body>
-<?php include "../../components\\navbar\\navbar.html";?>
+<?php include "../../components/navbar/navbar.html";?>
     <div class="">
         <h1>Conversation App</h1>
     </div>
-    <script src="../../components\\darkmod\\dark.js"></script> </body>
+    <script src="../../components/darkmod/dark.js"></script> </body>
 </html>
