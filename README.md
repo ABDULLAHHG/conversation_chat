@@ -11,3 +11,4 @@ its a simple chat that work on a private network
 2 - create .env file and copy the template in the .env.example and fill it with the requirement <br>
 3 - install python requrement libraries `pip install -r requirement.txt` <br>
 4 - run flask `python app.py` or `python3 app.py`<br>
+5 - the project should be in apache2 with php (linux) or xampp (windows)
