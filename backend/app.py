@@ -37,9 +37,9 @@ refresh_tokens = {}
 def register():
     try:
         data = request.get_json() 
-        name = data.get('Name')
+        name = data.get('Name').lower()
+        email = data.get('Email').lower()
         phone_number = data.get('Number')
-        email = data.get('Email')
         password = data.get('Password')
         errors = reg.register(name , email , password , phone_number)
         print(errors)
@@ -75,7 +75,7 @@ def token_required(f):
 def login():
     data = request.get_json() 
     print(data["email"] , data["password"])
-    username = log.login(data["email"] , data["password"])
+    username = log.login(data["email"].lower() , data["password"])
     if not username:
         return jsonify({'message': 'Could not verify'}), 401
     
