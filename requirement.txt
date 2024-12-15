@@ -4,4 +4,4 @@ PyJWT
 python-dotenv 
 pymysql
 sqlalchemy
-
+bcrypt
