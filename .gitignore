@@ -1,3 +1,6 @@
 .env
 backend/.env
-backend\modules\__pycache__
+backend/modules/__pycache__
+backend/modules/database/__pycache__
+backend/modules/utils/__pycache__
+
