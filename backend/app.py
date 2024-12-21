@@ -6,16 +6,16 @@ import jwt
 import os 
 
 from modules.register import register 
-from modules.database import update_refresh_token
+from modules.database.user_operations import update_refresh_token
 from modules.login import login 
-from modules.database import is_username_taken
-from modules.database import get_user_conversations
-from modules.database import get_user_contacts
-from modules.database import create_conversation_with_user
-from modules.database import insert_message
-from modules.database import get_messages
-from modules.database import get_user_id_by_username
-from modules.database import get_last_messages_for_user
+from modules.database.user_operations import is_username_taken
+from modules.database.conversation_operations import get_user_conversations
+from modules.database.conversation_operations import get_user_contacts
+from modules.database.conversation_operations import create_conversation_with_user
+from modules.database.message_operations import insert_message
+from modules.database.conversation_operations import get_messages_from_conversation_id
+from modules.database.utils import get_user_id_by_username
+from modules.database.message_operations import get_last_messages_for_user
 from modules.utils.get_private_ip import get_private_ip
 from modules.utils.get_private_ip import write_ip_to_file
 
@@ -249,7 +249,7 @@ def receive_messages():
     if not conversation_id:
         return jsonify({"error": "conversation_id cannot be empty"}), 400
 
-    messages = get_messages(conversation_id)
+    messages = get_messages_from_conversation_id(conversation_id)
     for message in messages:
         message["current_user_id"] = user_id
 
