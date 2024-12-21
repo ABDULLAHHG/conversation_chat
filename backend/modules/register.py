@@ -1,6 +1,6 @@
-from modules.database import insert_user
+from modules.database.user_operations import insert_user
 
-from modules.database import is_username_taken , is_email_taken , is_phone_number_taken 
+from modules.database.user_operations import is_username_taken , is_email_taken , is_phone_number_taken 
 
 class register:
     def register(self, user_name : str, user_email : str, user_password : str, user_phone : str) -> dict:
