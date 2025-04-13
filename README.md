@@ -2,11 +2,11 @@
 its a simple chat that work on a private network 
 
 ### Features 
-1 - Login & Register 
-2 - Search for user 
-3 - contact 
-4 - history 
-5 - chat 
+1 - Login & Register <br>
+2 - Search for user <br>
+3 - contact <br>
+4 - history <br>
+5 - chat <br> 
 
 
 #### issues 
