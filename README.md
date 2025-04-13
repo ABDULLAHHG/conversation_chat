@@ -1,6 +1,14 @@
 ### conversation chat 
 its a simple chat that work on a private network 
 
+### Features 
+1 - Login & Register 
+2 - Search for user 
+3 - contact 
+4 - history 
+5 - chat 
+
+
 #### issues 
 1 - currently its not work on ethernet <br>
 2 - its not working if there is no wifi connection or hostpot  
